@@ -39,6 +39,9 @@ if len(sys.argv) > 1:
         else:
             print("warp: Not enough arguments", file=sys.stderr)
             print('.')
+    elif sys.argv[1] == "--internal-list":
+        for k in warpdata:
+            print("{}\t{}".format(k, warpdata[k]))
     else:
         if sys.argv[1] in warpdata:
             print(warpdata[sys.argv[1]])
